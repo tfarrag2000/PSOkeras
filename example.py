@@ -71,7 +71,7 @@ if __name__ == "__main__":
                                                         stratify=iris.target)
 
     # Section II: First run the backpropagation simulation
-    model_s = vanilla_backpropagation()
+    model_s = vanilla_backpropagation(x_train , y_train)
 
     b_train_score = model_s.evaluate(x_train, y_train, batch_size=BATCH_SIZE, verbose=0)
     b_test_score = model_s.evaluate(x_test, y_test, batch_size=BATCH_SIZE, verbose=0)
